@@ -1,0 +1,10 @@
+{
+  "title": {
+    "id": "000400000000000",
+    "name": "Title",
+    "description": "Enter description.",
+    "icon": "icon.png",
+    "tags": [],
+    "resources": "res/"
+  }
+}
