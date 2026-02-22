@@ -25,7 +25,7 @@ target_link_libraries(my_game
 )
 
 # Package into .glt file
-add_custom_target(run_glt ALL
+add_custom_target(run_glt_my_game ALL
     COMMAND glt_execcreate $<TARGET_FILE:my_game> ${CMAKE_CURRENT_SOURCE_DIR}/.titleconfig
     DEPENDS my_game
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}

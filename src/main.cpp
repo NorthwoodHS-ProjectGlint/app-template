@@ -13,15 +13,21 @@ extern "C" void glattach(void* ctx) {
 
 extern "C" void app_setup() {
     glClear(GL_COLOR_BUFFER_BIT);
-    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    glClearColor(1.0f, 0.0f, 0.0f, 1.0f);
 }
 
 extern "C" int app_present() {
+
     glPresent();
     return glRunning();
 }
 
 extern "C" int app_cycle() {
+
+    glClear(GL_COLOR_BUFFER_BIT);
+    glClearColor(1.0f, 0.0f, 0.0f, 1.0f);
+
+
     if (hidIsButtonPressed(GLFW_KEY_ESCAPE)) {
         return 2; // Pause to home screen
     }
@@ -32,8 +38,6 @@ extern "C" int app_cycle() {
     }
     */
     
-    glClear(GL_COLOR_BUFFER_BIT);
-    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
     return 0; // Continue running
 }
